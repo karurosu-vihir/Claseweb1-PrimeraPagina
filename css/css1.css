@@ -1,0 +1,120 @@
+/* *{
+    position: fixed;
+    top: 0;
+} */
+
+/* css order:
+externo
+cabezera
+inline */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: cadetblue;
+    color: whitesmoke;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5rem;
+    position: unset;
+    margin-left: 20px;
+}
+
+ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ul li{
+    list-style: none;
+}
+
+li a{
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #436f70;
+    border-radius: 1.5rem;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+li a:hover{
+    background-color: #263f40;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.precios{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card{
+    margin: 0.5rem;
+    padding: 0;
+    border: 2px solid black;
+    width: 30%;
+    max-width: 300px;
+    min-width: 200px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.card h3{
+    margin: 0;
+    color: wheat;
+    background-color:olive;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.card p{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.card span{
+    display: block;
+    text-align: right;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.card button{
+    width: 100%;
+    background-color: olive;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+@media (max-width:1000px) {
+    header{
+        flex-flow: column;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form action="forms.html" method="GET">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+        <label for="correo">Correo:</label>
+        <input type="email" name="correo" id="correo" placeholder="Ingrese su correo" required>
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass" placeholder="Ingrese su contraseña" title="Ingrese su contraseña">
+        <fieldset>
+            <legend>Tema</legend>
+            <input type="radio" name="tema" id="dark" value="dark" checked>
+            <label for="dark">Dark</label>
+            <input type="radio" name="tema" id="light" value="light">
+            <label for="light">Light</label>
+            <input type="radio" name="tema" id="blue" value="blue">
+            <label for="blue">Blue</label>
+        </fieldset>
+        <fieldset>
+            <legend>textboxes:</legend>
+            <input type="checkbox" name="valores" id="primaria" value="1">
+            <label for="primaria">1</label>
+            <input type="checkbox" name="valores" id="secundaria" value="2">
+            <label for="secundaria">2</label>
+            <input type="checkbox" name="valores" id="generales" value="3">
+            <label for="generales">3</label>
+            <input type="checkbox" name="valores"id="especializados" value="4">
+            <label for="especializados">4</label>
+        </fieldset>
+        <fieldset>
+            <legend for="combobox">Combobox:</legend>
+            <select name="combobox" id="combobox">
+                <option value="America">America</option>
+                <option value="Africa" selected>Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="Europa">Europa</option>
+                <option value="Antartida">Antartida</option>
+                <option value="Polor Sur">Polor Sur</option>
+                <option value="Desconocido">Desconocido</option>
+            </select>
+        </fieldset>
+        <label for="textarea">Textarea:</label>
+        <textarea name="textarea" id="textarea" placeholder="textarea"></textarea>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+        <button type="boton">Boton</button>
+    </form>
+</body>
+</html>
