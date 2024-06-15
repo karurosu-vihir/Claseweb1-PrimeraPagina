@@ -71,7 +71,6 @@ main{
 .hero{
     background-color: gold;
     height: 79vh;
-    overflow: scroll;
     position: relative;
 }
 
@@ -118,14 +117,143 @@ main{
     border-radius: 1.5rem;
 }
 
+.container{
+    padding: 1rem;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.precios{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card{
+    margin: 0.5rem;
+    padding: 0;
+    border: 2px solid black;
+    width: 30%;
+    max-width: 300px;
+    min-width: 200px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.card h3{
+    margin: 0;
+    color: wheat;
+    background-color:olive;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.card p{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.card span{
+    display: block;
+    text-align: right;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.card button{
+    width: 100%;
+    background-color: olive;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+.footer-content, .footer-redes p, .footer-nav{
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    margin: 0;
+}
+
+footer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    text-decoration: none;
+    color: white;
+    padding: 0.6rem 0;
+    align-self: flex-start;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+}
+
 @media (max-width:700px) {
     .ulnavegacion{
         display: none;
+    }
+    .precios{
+        flex-flow: column;
+        align-items: center;
     }
 }
 
 @media (max-width:450px) {
     main{
         margin-top: 80px;
+    }
+}
+
+/* Mobile first */
+@media (min-width: 760px) {
+    footer{
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .footer-content{
+        flex: 1 0 100%;
+    }
+
+    .footer-nav, .footer-redes{
+        flex: 1 0 50%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container{
+        margin: 1rem auto;
+    }   
+
+    .precios{
+        gap: 90px;
+    }
+
+    .footer-content{
+        flex: 1 0 60%;
+        align-self: center;
+    }
+
+    .footer-nav, .footer-redes{
+        flex: 1 0 20%;
+        align-self: center;
     }
 }
