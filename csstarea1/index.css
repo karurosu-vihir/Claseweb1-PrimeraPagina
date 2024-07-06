@@ -2,8 +2,12 @@
     box-sizing: border-box;
 }
 
+body{
+    margin: 0;
+}
+
 header{
-    background-color: cornflowerblue;
+    background-color: cadetblue;
     color: whitesmoke;
     position: fixed;
     top: 0;
@@ -13,6 +17,8 @@ header{
     justify-content: space-between;
     padding: 0 20px;
     width: 100%;
+    max-height: 85px;
+    z-index: 10;
 }
 
 nav{
@@ -27,17 +33,24 @@ nav{
 }
 
 .navinfo img{
-    width: 32px;
-    height: 32px;
     border-radius: 50%;
 }
 
 .ulnavegacion{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
     list-style: none;
+    margin: 0;
+}
+
+.ulnavegacion li{
+    padding: 29px 19px;
+}
+
+.ulnavegacion li:hover{
+    background-color: #1d2f33;
 }
 
 .ulnavegacion a{
@@ -45,4 +58,191 @@ nav{
     color: whitesmoke;
 }
 
+.hamburguesa{
+    width: 32px;
+    height: 32px;
+    display: none;
+}
+
+main{
+    margin-top: 80px;
+}
+
+.hero{
+    height: 80vh;
+    position: relative;
+}
+
+.hero img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: bottom;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: 1;
+}
+
+.hero-info{
+    position: absolute;
+    top: 2.5%;
+    left: 10%;
+    z-index: 2;
+    max-width: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgb(80, 75, 75);
+    padding: 1rem 2rem;
+    border-radius: 12.5%;
+}
+
+.hero-info h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.hero-info p{
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.hero-info button{
+    width: 50%;
+    padding: 1.1rem 1.5rem;
+    border: 1px solid blue;
+    border-radius: 1.4rem;
+    background-color: dodgerblue;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.content{
+    display: flex;
+    flex-flow: column;
+    padding: 0 2rem;
+}
+
+.content h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.prod-flex{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.productos{
+    border: 1px solid black;
+    border-radius: 1.3rem;
+    width: 302px;
+    height: 600px;
+    position: relative;
+}
+
+.enc{
+    font-size: 1.5rem;
+    color: antiquewhite;
+    background-color: cadetblue;
+    height: 50px;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 1.3rem 1.3rem 0 0; 
+    /* trbl */
+}
+
+.enc h3{
+    margin: 0;
+}
+
+.productos img{
+    width: 300px;
+    height: 220px;
+}
+
+.info{
+    display: flex;
+    flex-flow: column;
+    padding: 0 1.5rem;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.precios{
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+.prod-btn{
+    width: calc(100% - 50px);
+    height: 40px;
+    background-color: #1d2f33;
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    position: absolute;
+    bottom: 20px;
+}
+
+footer{
+    background: #04244F;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin-top: 50px;
+}
+
+.social{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social p{
+    margin: 0;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.social img{
+    width: 32px;
+    height: 32px;
+}
+
+.social a{
+    cursor: pointer;
+}
+
+.footer-info{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media (max-width:725px) {
+    .ulnavegacion{
+        display: none;
+    }
+    .hamburguesa{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (max-width:725px) {
+    .ulnavegacion{
+        display: none;
+    }
+}
 /* Metricas piratas ensayo */

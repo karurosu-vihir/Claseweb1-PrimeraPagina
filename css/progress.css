@@ -1,0 +1,192 @@
+.animation{
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-circle{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: lavender;
+    background-image: conic-gradient(black, gray, darkgray, white);
+    position: absolute;
+    animation: gorigth 5s infinite;
+}
+
+.pipe{
+    width: 64px;
+    height: 128px;
+    background-color: green;
+    position: absolute;
+    top: 35%;
+    right: 60%;
+}
+
+@keyframes gorigth{
+    0%{
+        top: 50%;
+        right: 100%;
+        background-image: conic-gradient(white, gray, darkgray, black);
+        transform: rotate(360deg);
+    }
+    20%{
+        top: 50%;
+        right: 70%;
+        transform: rotate(180deg);
+    }
+    22%{
+        top: 20%;
+        right: 70%;
+
+    }
+    25%{
+        top: 20%;
+        right: 50%;
+    }
+    28%{
+        top: 50%;
+        right: 50%;
+    }
+    100%{
+        top: 50%;
+        right: 0;
+        background-image: conic-gradient(black, gray, darkgray, white);
+        transform: rotate(0deg);
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1000;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-loading{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: transparent;
+    border-top-color: black;
+    animation: rotate 3s ease-in-out infinite;
+}
+
+.hidden{
+    display: none;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.dancing-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    display: none;
+}
+
+.circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: gray;
+    animation: bounce 1s infinite;
+}
+
+.circle:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+.circle:nth-child(3){
+    animation-delay: 0.9s;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-16px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.atom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 5s infinite;
+    display: none;
+}
+
+.e{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.e:nth-child(2){
+    top: 0;
+}
+
+.e:nth-child(3){
+    animation: mover-horizontal 5s infinite;
+}
+
+.e:nth-child(4){
+    animation: mover-vertical 5s infinite;
+}
+
+@keyframes mover-vertical{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: calc(100% - 32px);
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes mover-horizontal{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: calc(100% - 32px);
+    }
+    100%{
+        left: 0;
+    }
+}

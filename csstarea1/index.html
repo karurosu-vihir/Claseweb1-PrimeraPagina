@@ -5,30 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Tarea de css</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/144982358?v=4">
+    <title>Modelo de Cajas</title>
 </head>
 
 <body>
     <header>
         <div class="navinfo">
-            <img src="chrome://branding/content/about-logo@2x.png" alt="logo">
-            <h1>CSS</h1>
+            <img src="https://placehold.co/48x48" alt="logo">
+            <h1>Fiesta de Modelo de Cajas</h1>
         </div>
         <nav>
             <ul class="ulnavegacion">
-                <li><a href="#">mama</a></li>
-                <li><a href="#">papa</a></li>
-                <li><a href="#">hijo</a></li>
-                <li><a href="#">nieto</a></li>
+                <a href="#">
+                    <li>Inicio</li>
+                </a>
+                <a href="#">
+                    <li>Perfil</li>
+                </a>
+                <a href="#">
+                    <li>Tienda</li>
+                </a>
+                <a href="#">
+                    <li>Contacto</li>
+                </a>
             </ul>
+            <img class="hamburguesa" src="./ham.png" alt="menu" onclick="menuclick()">
         </nav>
     </header>
     <main>
-
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1499803270242-467f7311582d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFja3BhY2tzfGVufDB8fDB8fHww"
+                alt="Mochilas para Acampar">
+            <div class="hero-info">
+                <h2>Mamuth - Back Force X18</h2>
+                <p>Las mochilas más <strong>especializadas</strong> para ir de campamento. <strong>Soporta todo
+                        clima</strong>, con capacidad de <strong>almacenaje de hasta 500KG</strong></p>
+                <button>Ver Más</button>
+            </div>
+        </section>
+        <section class="content">
+            <h2>Categorias</h2>
+            <div class="prod-flex">
+                <div class="productos">
+                    <div class="enc">
+                        <h3>Estudiantiles</h3>
+                    </div>
+                    <img src="https://walmarthn.vtexassets.com/arquivos/ids/326669/Mochila-Pen-Gear-color-azul-1-19028.jpg?v=638330783749470000"
+                        alt="mochila">
+                    <div class="info">
+                        <p class="desc">Las mejores mochilas para estudiantes en cada estapa de sus estudios,
+                            acondicionadas
+                            para llevar todo tipo de utiles y verse genial con ellas.</p>
+                        <p class="precios">Lps. 500 - Lps. 2,000</p>
+                        <button class="prod-btn">Ver Más</button>
+                    </div>
+                </div>
+                <div class="productos">
+                    <div class="enc">
+                        <h3>Laborales</h3>
+                    </div>
+                    <img src="https://image.made-in-china.com/202f0j00rZsTmBOMAfYp/2019-New-Stylish-Waterproof-Business-Formal-15-6-Inch-Laptop-Backpack-Bag.webp"
+                        alt="mochila">
+                    <div class="info">
+                        <p class="desc">Mochilas formales para que usted pueda llevar su computadora y otros materiales
+                            seguros dentro de muchos de los normativo de las empresas</p>
+                        <p class="precios">Lps. 1,000 - Lps. 3,000</p>
+                        <button class="prod-btn">Ver Más</button>
+                    </div>
+                </div>
+                <div class="productos">
+                    <div class="enc">
+                        <h3>Camping</h3>
+                    </div>
+                    <img src="https://s.libertaddigital.com/2021/08/10/mochila-de-camping-procase-pc-08362387-48l.jpg"
+                        alt="mochila">
+                    <div class="info">
+                        <p class="desc">Mochilas para acampar grandes, comodas para diferentes terrenos y duraderas.
+                            Disftuta del campamento sin preocuparte por la mochila!</p>
+                            <p class="precios">Lps. 5,000 - Lps. 12,000</p>
+                        <button class="prod-btn">Ver Más</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-
+        <div class="social">
+            <p>Redes Sociales:</p>
+            <a href="https://github.com/karurosu-vihir" target="_blank"><img
+                    src="https://github.githubassets.com/assets/gh-desktop-7c9388a38509.png" alt="github" /></a>
+        </div>
+        <div class="footer-info">
+            <h4>Desarollado por Carlos E. Vijil</h4>
+        </div>
     </footer>
+    <script>
+        const menuclick = () => {alert('No he sido implementado')};
+    </script>
 </body>
 
 </html>
